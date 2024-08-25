@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight Translations - Novel Reader</title>
+    <link rel="icon" type="image" href="/img/logo.jpeg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+        }
+        .hero {
+            background-image: url('/img/wallpaperflare.com_wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1rem;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+        .gallery {
+            max-width: 100%;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #2a2a2a;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            border-radius: 10px;
+        }
+        .gallery h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+        .gallery-slider {
+            position: relative;
+            overflow: hidden;
+            max-width: 90vw;
+            margin: 0 auto;
+        }
+        .gallery-container {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item {
+            flex: 0 0 100%;
+            padding: 0 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        .gallery-item .image-container {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90%;
+            width: 100%;
+        }
+        .gallery-item img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            cursor: zoom-in;
+        }
+        .gallery-item img.portrait {
+            max-height: 100%;
+            max-width: 95%;
+        }
+        .gallery-item img.landscape {
+            max-width: 100%;
+            max-height: 95%;
+        }
+        .gallery-item img.zoomed {
+            cursor: zoom-out;
+        }
+        .gallery-caption {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #ddd;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: #fff;
+            background-color: rgba(0,0,0,0.5);
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .gallery-nav:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .gallery-nav.prev {
+            left: 0;
+        }
+        .gallery-nav.next {
+            right: 0;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                height: 200px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 0.9rem;
+            }
+            .gallery-nav {
+                font-size: 1.2rem;
+                padding: 3px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">Wanz Translations</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html#daftar-novel">Daftar Novel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Fanspage</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Starlight Translations</h1>
+            <p>GALERI || Volume 1 || Arc 1</p>
+        </div>
+    </div>
+
+    <main class="gallery container">
+        <h2>GALERI</h2>
+        <div class="gallery-slider">
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <div class="image-container">
+                        <img src="/konten/arc1_bab/illustrasi/Re_Zero_Volume_1_Cover.webp" alt="Cover">
+                    </div>
+                    <div class="gallery-caption">Cover</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-container">
+                        <img src="/konten/arc1_bab/illustrasi/Re_Zero_Volume_1_Inside_Cover.webp" alt="Inside">
+                    </div>
+                    <div class="gallery-caption">Inside</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-container">
+                        <img src="/konten/arc1_bab/illustrasi/Re_Zero_Volume_1_Cover_Art.webp" alt="Cover Art">
+                    </div>
+                    <div class="gallery-caption">Cover Art</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-container">
+                        <img src="/konten/arc1_bab/illustrasi/Re_Zero_Light_Novel_1_ToC.webp" alt="Table of Contents">
+                    </div>
+                    <div class="gallery-caption">Table of Contents</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-container">
+                        <img src="/konten/arc1_bab/illustrasi/Re_Zero_Light_Novel_1_1.webp" alt="Light Novel">
+                    </div>
+                    <div class="gallery-caption">Light Novel 1</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-container">
+                        <img src="/konten/arc1_bab/illustrasi/Re_Zero_Light_Novel_1_2.webp" alt="Light Novel">
+                    </div>
+                    <div class="gallery-caption">Light Novel 2</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-container">
+                        <img src="/konten/arc1_bab/illustrasi/Re_Zero_Light_Novel_1_3.webp" alt="Light Novel">
+                    </div>
+                    <div class="gallery-caption">Light Novel 3</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-container">
+                        <img src="/konten/arc1_bab/illustrasi/Re_Zero_Light_Novel_1_14.webp" alt="Light Novel">
+                    </div>
+                    <div class="gallery-caption">Light Novel </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-container">
+                        <img src="/konten/arc1_bab/illustrasi/Re_Zero_Light_Novel_1_15.webp" alt="Light Novel">
+                    </div>
+                    <div class="gallery-caption">Light Novel </div>
+                </div>
+            </div>
+            <button class="gallery-nav prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="gallery-nav next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-black py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Tentang Starlight Translations</h5>
+                    <p>Starlight Translations adalah platform terjemahan novel web Re:Zero yang memberikan terjemahan cepat kepada pembaca.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/index.html" class="text-black">Beranda</a></li>
+                        <li><a href="/index.html#daftar-novel" class="text-black">Daftar Arc</a></li>
+                        <li><a href="#" class="text-black">Tentang Kami</a></li>
+                        <li><a href="#" class="text-black">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Ikuti Kami</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-black">Facebook</a></li>
+                        <li><a href="#" class="text-black">Twitter</a></li>
+                        <li><a href="#" class="text-black">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2023 Wanz Translations. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.gallery-container');
+            const items = document.querySelectorAll('.gallery-item');
+            const prevBtn = document.querySelector('.gallery-nav.prev');
+            const nextBtn = document.querySelector('.gallery-nav.next');
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                container.style.transform = `translateX(-${index * 100}%)`;
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % items.length;
+                showSlide(currentIndex);
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                showSlide(currentIndex);
+            }
+
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            // Otomatis geser setiap 5 detik
+            setInterval(nextSlide, 5000);
+
+            // Fungsi untuk menentukan orientasi gambar
+            function determineOrientation(img) {
+                if (img.naturalWidth > img.naturalHeight) {
+                    img.classList.add('landscape');
+                } else {
+                    img.classList.add('portrait');
+                }
+            }
+
+            // Fungsi zoom yang mengikuti kursor
+            function zoomImage(e) {
+                const zoomed = this.classList.contains('zoomed');
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const xPercent = (x / rect.width) * 100;
+                const yPercent = (y / rect.height) * 100;
+
+                if (zoomed) {
+                    this.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+                    this.style.transform = 'scale(2)';
+                } else {
+                    this.style.transformOrigin = 'center center';
+                    this.style.transform = 'scale(1)';
+                }
+            }
+
+            // Tambahkan fungsi zoom dan tentukan orientasi
+            const images = document.querySelectorAll('.gallery-item img');
+            images.forEach(img => {
+                img.addEventListener('load', function() {
+                    determineOrientation(this);
+                });
+                img.addEventListener('click', function() {
+                    this.classList.toggle('zoomed');
+                    zoomImage.call(this, event);
+                });
+                img.addEventListener('mousemove', function(e) {
+                    if (this.classList.contains('zoomed')) {
+                        zoomImage.call(this, e);
+                    }
+                });
+                img.addEventListener('mouseleave', function() {
+                    if (this.classList.contains('zoomed')) {
+                        this.classList.remove('zoomed');
+                        this.style.transformOrigin = 'center center';
+                        this.style.transform = 'scale(1)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

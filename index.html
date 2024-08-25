@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight Translations - Novel Reader</title>
+    <link rel="icon" type="image" href="/img/logo.jpeg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/wallpaperflare.com_wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease forwards;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease 0.5s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .navbar {
+            background-color: rgba(18, 18, 18, 0.8) !important;
+            backdrop-filter: blur(10px);
+        }
+        .arc-card {
+            background-color: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            overflow: hidden;
+            display: flex;
+            align-items: stretch;
+            height: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .arc-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        .arc-card img {
+            width: 40%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .arc-card-body {
+            padding: 25px;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .arc-card-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        .arc-card p {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            line-clamp: 5;
+            -webkit-box-orient: vertical;
+        }
+        footer {
+            background-color: #1e1e1e;
+            color: #b0b0b0;
+        }
+        footer a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Starlight Translations</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#daftar-novel">Daftar Novel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Manga/index.html">Baca Komik</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Starlight Translations</h1>
+            <p>Penerjemah Bahasa Indonesia || Novel ||</p>
+        </div>
+    </div>
+
+    <div class="container mt-5" id="daftar-novel">
+        <div class="row">
+            <div class="col-12">
+                <a href="/Arc/arc1.html" class="text-decoration-none">
+                    <div class="arc-card">
+                        <div class="arc-card-body">
+                            <h2 class="arc-card-title">Arc 1 - Hari Pertama yang Penuh Gejolak</h2>
+                            <p>Natsuki Subaru secara misterius dipindahkan ke dunia fantasi, di mana dia bertemu dengan gadis berambut perak bernama Emilia. Bertekad untuk membantunya, Subaru menemukan kemampuan unik yang menantangnya untuk menavigasi dunia baru yang berbahaya ini dan melindungi teman barunya.</p>
+                        </div>
+                        <img src="img_card/arc1.webp" alt="Arc 1">
+                    </div>
+                </a>
+            </div>
+            <div class="col-12">
+                <div class="arc-card">
+                    <div class="arc-card-body">
+                        <h2 class="arc-card-title">Arc 2 - Minggu yang Kacau</h2>
+                        <p>Natsuki Subaru, melanjutkan petualangannya di dunia fantasi, menemukan dirinya di Roswaal Manor yang misterius. Di sini, ia bertemu sekutu baru dan menghadapi tantangan yang tidak terduga.</p>
+                    </div>
+                    <img src="img_card/arc2.webp" alt="Arc 2">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="arc-card">
+                    <div class="arc-card-body">
+                        <h2 class="arc-card-title">Arc 3 - Kembali ke Ibukota</h2>
+                        <p>Natsuki Subaru kembali ke ibukota kerajaan, di mana ia terlibat dalam perjuangan politik yang intens untuk tahta. Dengan sekutu baru dan teman lama di sisinya, Subaru menghadapi musuh yang tangguh dan cobaan yang berbahaya. Dengan menggunakan kemampuannya yang unik, ia harus menavigasi lanskap berbahaya ini untuk melindungi orang-orang yang ia sayangi dan membantu mengamankan masa depan kerajaan.</p>
+                    </div>
+                    <img src="img_card/arc3.webp" alt="Arc 3">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="arc-card">
+                    <div class="arc-card-body">
+                        <h2 class="arc-card-title">Arc 4 - Kontrak Abadi</h2>
+                        <p>Natsuki Subaru tiba di Sanctuary, sebuah desa tersembunyi dengan misteri dan tantangannya sendiri. Menghadapi cobaan yang menguji batas-batasnya, Subaru harus mengungkap rahasia Sanctuary dan menjalin aliansi baru.</p>
+                    </div>
+                    <img src="img_card/arc4.webp" alt="Arc 4">
+                </div>
+            </div>
+            <div class="col-12">
+                <a href="/Arc/arc5.html" class="text-decoration-none">
+                <div class="arc-card">
+                    <div class="arc-card-body">
+                        <h2 class="arc-card-title">Arc 5 - Bintang Yang Menuai Sejarah</h2>
+                        <p>Subaru dan teman-temannya melakukan perjalanan ke kota gerbang air Priestella, di mana mereka terlibat dalam konflik melawan penyihir. Ketika kota menghadapi bahaya yang belum pernah terjadi sebelumnya, Subaru harus mengerahkan sekutunya dan menghadapi kekuatan menakutkan yang mengancam dunia mereka.</p>
+                    </div>
+                    <img src="img_card/arc5.webp" alt="Arc 5">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="arc-card">
+                    <div class="arc-card-body">
+                        <h2 class="arc-card-title">Arc 6 - Koridor Memori</h2>
+                        <p>Subaru memulai perjalanan ke Menara Pengawal Pleiades yang misterius, mencari jawaban dan pengetahuan untuk mencegah bencana di masa depan. Di dalam menara, ia menghadapi cobaan yang menggali kedalaman ingatannya dan menguji pemahamannya tentang dirinya dan kemampuannya.</p>
+                    </div>
+                    <img src="img_card/arc6.webp" alt="Arc 6">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="arc-card">
+                    <div class="arc-card-body">
+                        <h2 class="arc-card-title">Arc 7 - Negeri Serigala</h2>
+                        <p>Subaru berkelana ke Kekaisaran Vollachian yang tidak bernama, tanah yang dikuasai konflik dan perselisihan. Di tengah kekacauan, ia bertemu sekutu dan musuh baru, sambil mencari cara untuk membawa stabilitas ke wilayah yang dilanda perang ini.</p>
+                    </div>
+                    <img src="img_card/arc7.webp" alt="Arc 7">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="arc-card">
+                    <div class="arc-card-body">
+                        <h2 class="arc-card-title">Arc 8 - Vincent Vollachia</h2>
+                        <p>Subaru memimpin pemberontakan melawan pasukan mayat hidup setelah Bencana Besar menyerang Vollachia. Dapatkah kekuatan gabungan Vollachia dan dan Lugunica mengatasi gerombolan mayat hidup yang tidak pernah berakhir?</p>
+                    </div>
+                    <img src="img_card/arc8.jpeg" alt="Arc 8">
+                </div>
+            </div>
+            <div class="col-12">
+                <a href="/Arc/arc9.html" class="text-decoration-none">
+                    <div class="arc-card">
+                        <div class="arc-card-body">
+                            <h2 class="arc-card-title">Arc 9 - Cahaya Bintang Tanpa Nama</h2>
+                            <p>Subaru Kembali ke Menara Pleiades demi menuruti keinginan Al, namun tak disangka, dia harus berisitirahat selama Arc berjalan.</p>
+                        </div>
+                        <img src="img/Pleiades_Watchtower.webp" alt="Arc 9">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="mb-3">Tentang Starlight Translations</h5>
+                    <p>Starlight Translations adalah platform terjemahan novel web Re:Zero yang memberikan terjemahan cepat kepada pembaca.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#daftar-novel">Daftar Arc</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Ikuti Kami</h5>
+                    <ul class="list-unstyled">
+                        <li><a href=""><i class="fab fa-facebook me-2"></i>Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-instagram me-2"></i>Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2024 Starlight Translations. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
