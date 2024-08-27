@@ -6,35 +6,40 @@
     <title>Starlight Translations - Novel Reader</title>
     <link rel="icon" type="image" href="/img/logo.jpeg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             background-color: #121212;
             color: #e0e0e0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
         }
         .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/wallpaperflare.com_wallpaper.jpg');
+            background-image: url('/img/wallpaperflare.com_wallpaper.jpg');
             background-size: cover;
             background-position: center;
-            height: 500px;
+            height: 300px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
         }
         .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
             opacity: 0;
             transform: translateY(50px);
             animation: fadeInUp 1s ease forwards;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
         .hero p {
             font-size: 1.5rem;
             opacity: 0;
             transform: translateY(50px);
             animation: fadeInUp 1s ease 0.5s forwards;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
         }
         @keyframes fadeInUp {
             to {
@@ -43,8 +48,53 @@
             }
         }
         .navbar {
-            background-color: rgba(18, 18, 18, 0.8) !important;
+            background-color: #4e3a4c !important;
             backdrop-filter: blur(10px);
+        }
+        .navbar-toggler {
+            border-color: rgba(255,255,255,0.5);
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        .theme-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        .theme-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
         }
         .arc-card {
             background-color: #1e1e1e;
@@ -55,7 +105,7 @@
             display: flex;
             align-items: stretch;
             height: 300px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
         }
         .arc-card:hover {
             transform: translateY(-10px);
@@ -79,6 +129,7 @@
             color: #ffffff;
             font-family: 'Arial', sans-serif;
             font-weight: bold;
+            transition: color 0.3s;
         }
         .arc-card p {
             font-size: 1.1rem;
@@ -88,10 +139,12 @@
             -webkit-line-clamp: 5;
             line-clamp: 5;
             -webkit-box-orient: vertical;
+            transition: color 0.3s;
         }
         footer {
             background-color: #1e1e1e;
             color: #b0b0b0;
+            transition: background-color 0.3s, color 0.3s;
         }
         footer a {
             color: #b0b0b0;
@@ -117,6 +170,20 @@
                 order: 1;
             }
         }
+
+        #theme-toggle {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        #theme-toggle:hover {
+            color: #f1c40f;
+        }
     </style>
 </head>
 <body>
@@ -129,13 +196,24 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Beranda</a>
+                        <a class="nav-link" href="#"><i class="fas fa-home"></i> Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#daftar-novel">Daftar Novel</a>
+                        <a class="nav-link" href="#daftar-novel"><i class="fas fa-book"></i> Daftar Novel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Manga/index.html">Baca Komik</a>
+                        <a class="nav-link" href="/Manga/index.html"><i class="fas fa-book-open"></i> Baca Komik</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fab fa-discord"></i> Discord</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-info-circle"></i> Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-link nav-link">
+                            <i class="fas fa-moon"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -272,5 +350,43 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const arcCards = document.querySelectorAll('.arc-card');
+        const arcCardTitles = document.querySelectorAll('.arc-card-title');
+        const arcCardTexts = document.querySelectorAll('.arc-card p');
+        const footer = document.querySelector('footer');
+        const footerLinks = document.querySelectorAll('footer a');
+        const icon = themeToggle.querySelector('i');
+
+        themeToggle.addEventListener('click', function() {
+            if (body.style.backgroundColor === 'rgb(255, 255, 255)' || body.style.backgroundColor === '') {
+                // Switch to dark mode
+                body.style.backgroundColor = '#121212';
+                body.style.color = '#e0e0e0';
+                arcCards.forEach(card => card.style.backgroundColor = '#1e1e1e');
+                arcCardTitles.forEach(title => title.style.color = '#ffffff');
+                arcCardTexts.forEach(text => text.style.color = '#b0b0b0');
+                footer.style.backgroundColor = '#1e1e1e';
+                footer.style.color = '#b0b0b0';
+                footerLinks.forEach(link => link.style.color = '#b0b0b0');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                // Switch to light mode
+                body.style.backgroundColor = '#ffffff';
+                body.style.color = '#000000';
+                arcCards.forEach(card => card.style.backgroundColor = '#f0f0f0');
+                arcCardTitles.forEach(title => title.style.color = '#000000');
+                arcCardTexts.forEach(text => text.style.color = '#333333');
+                footer.style.backgroundColor = '#f0f0f0';
+                footer.style.color = '#333333';
+                footerLinks.forEach(link => link.style.color = '#333333');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        });
+    </script>
 </body>
 </html>
