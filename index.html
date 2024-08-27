@@ -74,9 +74,11 @@
             justify-content: center;
         }
         .arc-card-title {
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 15px;
             color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
         }
         .arc-card p {
             font-size: 1.1rem;
@@ -98,6 +100,22 @@
         }
         footer a:hover {
             color: #ffffff;
+        }
+        
+        @media (max-width: 768px) {
+            .arc-card {
+                flex-direction: column;
+                height: auto;
+            }
+            .arc-card img {
+                width: 100%;
+                height: 200px;
+                order: 2;
+            }
+            .arc-card-body {
+                width: 100%;
+                order: 1;
+            }
         }
     </style>
 </head>
@@ -137,7 +155,7 @@
                 <a href="/Arc/arc1.html" class="text-decoration-none">
                     <div class="arc-card">
                         <div class="arc-card-body">
-                            <h2 class="arc-card-title">Arc 1 - Hari Pertama yang Penuh Gejolak</h2>
+                            <h3 class="arc-card-title">Arc 1 - Hari Pertama yang Penuh Gejolak</h3>
                             <p>Natsuki Subaru secara misterius dipindahkan ke dunia fantasi, di mana dia bertemu dengan gadis berambut perak bernama Emilia. Bertekad untuk membantunya, Subaru menemukan kemampuan unik yang menantangnya untuk menavigasi dunia baru yang berbahaya ini dan melindungi teman barunya.</p>
                         </div>
                         <img src="img_card/arc1.webp" alt="Arc 1">
@@ -147,7 +165,7 @@
             <div class="col-12">
                 <div class="arc-card">
                     <div class="arc-card-body">
-                        <h2 class="arc-card-title">Arc 2 - Minggu yang Kacau</h2>
+                        <h3 class="arc-card-title">Arc 2 - Minggu yang Kacau</h3>
                         <p>Natsuki Subaru, melanjutkan petualangannya di dunia fantasi, menemukan dirinya di Roswaal Manor yang misterius. Di sini, ia bertemu sekutu baru dan menghadapi tantangan yang tidak terduga.</p>
                     </div>
                     <img src="img_card/arc2.webp" alt="Arc 2">
